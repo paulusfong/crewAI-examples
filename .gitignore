@@ -20,3 +20,12 @@ dist/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# IDEs
+.idea/
+.vscode/
+
+# Test and coverage
+.coverage
+htmlcov/
+.mutmut-cache
