@@ -12,6 +12,18 @@ dependencies = [
     "sec-api>=1.0.20",
 ]
 
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "mutmut>=2.4.0",
+]
+
 [project.scripts]
 stock_analysis = "stock_analysis.main:run"
 train = "stock_analysis.main:train"
+test = "pytest"
+
+[tool.mutmut]
+paths = ["src/stock_analysis/tools/calculator_tool.py"]
+test_command = "python3 -m pytest -x tests/tools/test_calculator_tool.py"
